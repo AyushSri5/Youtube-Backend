@@ -18,7 +18,14 @@ app.use(express.static("public"))
 
 app.use(cookieParser());
 
+//ROUTES IMPORT
+import userRouter from './routes/user.routes.js';
 
+
+
+//Routes declarations
+// Path is prefix for user Router
+app.use("/api/v1/users",userRouter);
 
 
 export {app}
